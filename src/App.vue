@@ -125,7 +125,7 @@ h2{
   }
   .box1{
     grid-column: 1/3;
-    grid-row: 5/9;
+    grid-row: 5/7;
 
   }
   .box3{
@@ -137,6 +137,10 @@ h2{
   grid-row: 2/2;
   text-align: center;
 }
+  .box5{
+    grid-column: 1/3;
+    grid-row: 7/9;
+  }
 .container{
   grid-template-rows: 1fr;
 }
