@@ -5,12 +5,12 @@
         </div>
         <div class="text">
             <h1>My Profile</h1><br/>
-            <p class="name">{{username}}</p><button type="button" class="username_button" onclick="">Edit</button><br/><br/>
-            <p class="number">Phone number: {{phoneNumber}}</p><button type="button" class="username_button" onclick="">Edit</button><br/><br/>
-            <p class="email">Email address: {{emailaddress}}</p><button type="button" class="username_button" onclick="">Edit</button><br/><br/>
+            <p class="name">{{username}}</p><Popup id="pop1"></Popup><br/><br/>
+            <p class="number">Phone number: {{phoneNumber}}</p><Popup id="pop2"></Popup><br/><br/>
+            <p class="email">Email address: {{emailaddress}}</p><Popup id="pop3"></Popup><br/><br/>
             <div>
                 <h3>SMS ALERT ACTIVATION</h3>
-                <input type="checkbox" class="myCheck" onclick="activateSMS()"><br/><br/>
+                <input type="checkbox" class="myCheck" v-on:click="activateSMS()"><br/><br/>
             </div>
 
         </div>
@@ -20,8 +20,12 @@
 </template>
 
 <script>
+    import Popup from "@/components/Popup";
     export default {
         name: "Profile",
+        components:{
+            Popup
+        },
         methods:{
             activateSMS: function(){
                 if (!this.isActivated){
@@ -50,7 +54,7 @@
 
     }
     h3, .name, .number, .email{
-        display: inline;
+            display: inline;
         margin-right: 10px;
     }
     .profile-image{
@@ -64,10 +68,6 @@
 
     }
 
-    .title {
-        color: grey;
-        font-size: 18px;
-    }
 
     .save {
         border: none;
@@ -80,20 +80,6 @@
         cursor: pointer;
         width: 100%;
         font-size: 18px;
-    }
-    .username_button{
-        border: none;
-        outline: 0;
-        display: inline-block;
-        padding: 1px;
-        color: white;
-        background-color: rgba(40,40,40,0.89);
-        text-align: center;
-        cursor: pointer;
-        width: 10%;
-        font-size: 13px;
-        float: right;
-
     }
 
     a {
@@ -116,6 +102,13 @@
     }
     .myCheck{
         background-color: #2c3e50;
+
+    }
+
+    #pop1, #pop2, #pop3{
+        float: top;
+    }
+    #pop1{
 
     }
 </style>
