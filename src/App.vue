@@ -5,6 +5,7 @@
       <div class="box box2"><Profile/></div>
       <div class="box box3"><Navbar></Navbar></div>
       <div class="box box4"><h2>My finance dashboard</h2><p>Welcome to Wallet payment portal</p></div>
+      <div class="box box5"><Bills/></div>
 
     </div>
 
@@ -19,6 +20,8 @@ import Navbar from "@/components/Navbar";
 import Profile from "@/components/Profile";
 import Login from "@/components/Login";
   import Accounts from "@/components/Accounts";
+  import Bills from "@/components/Bills";
+
 
   import Vue from 'vue'
   import { BootstrapVue, IconsPlugin } from 'bootstrap-vue'
@@ -37,7 +40,9 @@ export default {
     // eslint-disable-next-line vue/no-unused-components
     Login,
     // eslint-disable-next-line vue/no-unused-components
-    Accounts
+    Accounts,
+    // eslint-disable-next-line vue/no-unused-components
+    Bills
   }
 }
 
@@ -82,7 +87,7 @@ h2{
   }
   .box5{
     grid-column: 3/3;
-    grid-row: 1/1;
+    grid-row: 4/9;
   }
   .box2{
     grid-column: 2/2;
@@ -91,7 +96,7 @@ h2{
   }
 .box1{
   grid-column: 3/3;
-  grid-row: 2/9;
+  grid-row: 2/4;
 
 }
   .box3{

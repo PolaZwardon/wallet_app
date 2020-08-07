@@ -4,13 +4,13 @@
             <img class="profile-image" src="./../assets/profile-img.png" alt="John" style="width:40%">
         </div>
         <div class="text">
-            <h1>My Profile</h1>
-            <p class="name">{{username}}</p><button type="button" class="username_button" onclick="">Edit</button><br/>
-            <p class="number">Phone number: {{phoneNumber}}</p><button type="button" class="username_button" onclick="">Edit</button><br/>
-            <p class="email">Email address: {{emailaddress}}</p><button type="button" class="username_button" onclick="">Edit</button><br/>
+            <h1>My Profile</h1><br/>
+            <p class="name">{{username}}</p><button type="button" class="username_button" onclick="">Edit</button><br/><br/>
+            <p class="number">Phone number: {{phoneNumber}}</p><button type="button" class="username_button" onclick="">Edit</button><br/><br/>
+            <p class="email">Email address: {{emailaddress}}</p><button type="button" class="username_button" onclick="">Edit</button><br/><br/>
             <div>
                 <h3>SMS ALERT ACTIVATION</h3>
-                <input type="checkbox" class="myCheck" onclick="activateSMS()">
+                <input type="checkbox" class="myCheck" onclick="activateSMS()"><br/><br/>
             </div>
 
         </div>
@@ -61,6 +61,7 @@
         box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
         max-width: 600px;
         margin: auto;
+
     }
 
     .title {
@@ -80,6 +81,20 @@
         width: 100%;
         font-size: 18px;
     }
+    .username_button{
+        border: none;
+        outline: 0;
+        display: inline-block;
+        padding: 1px;
+        color: white;
+        background-color: rgba(40,40,40,0.89);
+        text-align: center;
+        cursor: pointer;
+        width: 10%;
+        font-size: 13px;
+        float: right;
+
+    }
 
     a {
         text-decoration: none;
@@ -96,9 +111,8 @@
     }
     .text{
         font-family: Dosis, sans-serif;
-        margin-left: 30px;
-        margin-top: 20px;
-        margin-bottom: 20px;
+        margin: 20px 30px;
+
     }
     .myCheck{
         background-color: #2c3e50;
