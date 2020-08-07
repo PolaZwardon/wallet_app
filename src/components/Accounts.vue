@@ -4,9 +4,9 @@
         <div class="text">
             <h1>My Accounts</h1>
             <div class="accounts">
-                <h3>Active Account</h3>
+                <AccountButton></AccountButton>
                 <p>6572 0932 2263 7773</p>
-                <h3>Blocked Account</h3>
+                <AccountButton></AccountButton>
                 <p>5453 3382 0002 4382</p>
             </div>
 
@@ -17,8 +17,11 @@
 </template>
 
 <script>
+    import AccountButton from "@/components/AccountButton";
     export default {
-        name: "Accounts"
+        name: "Accounts",
+        components:{AccountButton},
+
     }
 </script>
 
@@ -29,9 +32,7 @@
     }
     .text{
         font-family: Dosis, sans-serif;
-        margin-left: 30px;
-        margin-top: 20px;
-        margin-bottom: 20px;
+        margin: 20px 30px;
     }
     .card {
         background: rgba(255,255,255,0.74);
@@ -51,7 +52,21 @@
         width: 100%;
         font-size: 18px;
     }
+    .account_button{
+        border: none;
+        outline: 0;
+        display: inline-block;
+        padding: 1px;
+        color: white;
+        background-color: rgba(40,40,40,0.89);
+        text-align: center;
+        cursor: pointer;
+        width: 30%;
+        font-size: 13px;
+        float: right;
+    }
     button:hover, a:hover {
         opacity: 0.7;
     }
+
 </style>
