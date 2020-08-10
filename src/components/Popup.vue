@@ -5,10 +5,10 @@
         </div>
     <div id="popup1" class="overlay">
         <div class="popup">
-            <h2>Here i am</h2>
+            <h2>{{title}}</h2>
             <a class="close" href="#">&times;</a>
             <div class="content">
-                Thank to pop me out of that button, but now i'm done so you can close this window.
+                <p>{{ msg }}</p>
             </div>
         </div>
     </div>
@@ -17,8 +17,18 @@
 
 <script>
     export default {
-        name: "Popup"
+        name: "Popup",
+        props:{
+            title: String,
+            msg: String
+
+        },
+        data () {
+            return {
+            }
+            }
     }
+
 </script>
 
 <style scoped>
@@ -34,9 +44,7 @@
     .box {
         width: 40px;
         height: 40px;
-
         margin: 0 auto;
-        padding: 25px;
         background-clip: padding-box;
         text-align: center;
         float: right;
@@ -52,8 +60,6 @@
         text-align: center;
         cursor: pointer;
         font-size: 13px;
-        float: right;
-        position: absolute;
 
     }
     .button:hover {

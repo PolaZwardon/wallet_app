@@ -5,9 +5,9 @@
         </div>
         <div class="text">
             <h1>My Profile</h1><br/>
-            <p class="name">{{username}}</p><Popup id="pop1"></Popup><br/><br/>
-            <p class="number">Phone number: {{phoneNumber}}</p><Popup id="pop2"></Popup><br/><br/>
-            <p class="email">Email address: {{emailaddress}}</p><Popup id="pop3"></Popup><br/><br/>
+            <p class="name">{{username}}</p><Popup :title=title :msg=msg id="pop1"></Popup><br/><br/>
+            <p class="number">Phone number: {{phoneNumber}}</p><Popup :title=title :msg=msg id="pop2"></Popup><br/><br/>
+            <p class="email">Email address: {{emailaddress}}</p><Popup :title=title :msg=msg id="pop3"></Popup><br/><br/>
             <div>
                 <h3>SMS ALERT ACTIVATION</h3>
                 <input type="checkbox" class="myCheck" v-on:click="activateSMS()"><br/><br/>
@@ -21,6 +21,7 @@
 
 <script>
     import Popup from "@/components/Popup";
+
     export default {
         name: "Profile",
         components:{
@@ -41,7 +42,15 @@
                 username: 'John Doe',
                 phoneNumber: '+48 789-263-109',
                 emailaddress: 'john.doe1@mail.com',
-                isActivated: false
+                isActivated: false,
+                usernameChange:'Change your username',
+                title:"Change your personal data",
+                msg:"Here you can change your personal data. In progress",
+                title1:"Change phone number",
+                msg1:"Here you can change your phone number",
+                title2:"Change email address",
+                msg2:"Here you can change your email address",
+
             }
         }
     }
